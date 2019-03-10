@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>写字的人</title>
+    <!--People_write-->
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/Project.css">
+    <link rel="stylesheet" href="./assets/less/template.css">
+</head>
+
+<body>
+    <!-- People_write -->
+
+    <div id="app">
+        <article class="nav-title">
+            <mt-header title="写字的人">
+                <router-link to="/" slot="left">
+                    <mt-button icon="back"></mt-button>
+                </router-link>
+                <!-- <mt-button icon="more" slot="right"></mt-button> -->
+            </mt-header>
+        </article>
+
+        <div class="mobile_content">
+            <!--写字的人-->
+            <article class="Book fl publicPadding People_write ">
+
+                <div class="Chairclass-content mb-30">
+                    <img src="./assets/mobile_img/People_write.png" alt="">
+                    <h3 class="fz18 c30">我喜欢石头和云</h3>
+                    <p class="fz15 c5">
+                        工作的时候，走着走着就会有天花板。我的外语就是全部在工作中学的，仅限于沟通.....
+                    </p>
+                    <time class="fz15 c9">2019-01-12</time>
+                </div>
+                <div class="Chairclass-content mb-30">
+                    <img src="./assets/mobile_img/People_write.png" alt="">
+                    <h3 class="fz18 c30">我喜欢石头和云</h3>
+                    <p class="fz15 c5">
+                        工作的时候，走着走着就会有天花板。我的外语就是全部在工作中学的，仅限于沟通.....
+                    </p>
+                    <time class="fz15 c9">2019-01-12</time>
+                </div>
+
+                <div class="Chairclass-content mb-30">
+                    <img src="./assets/mobile_img/People_write.png" alt="">
+                    <h3 class="fz18 c30">我喜欢石头和云</h3>
+                    <p class="fz15 c5">
+                        工作的时候，走着走着就会有天花板。我的外语就是全部在工作中学的，仅限于沟通.....
+                    </p>
+                    <time class="fz15 c9">2019-01-12</time>
+                </div>
+                <div class="Chairclass-content mb-30">
+                    <img src="./assets/mobile_img/People_write.png" alt="">
+                    <h3 class="fz18 c30">我喜欢石头和云</h3>
+                    <p class="fz15 c5">
+                        工作的时候，走着走着就会有天花板。我的外语就是全部在工作中学的，仅限于沟通.....
+                    </p>
+                    <time class="fz15 c9">2019-01-12</time>
+                </div>
+
+
+            </article>
+
+        </div>
+    </div>
+
+</body>
+
+<!-- 先引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+<script>
+
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+
+                Haveclass_menuList: '1',
+                value: '',
+
+            }
+        },
+        watch: {
+            selected: function (val, oldVal) {
+                console.log(val)
+                // click后打印出当前mt-tab-item的id
+            },
+            Haveclass_menuList: function (val, oldVal) {
+                console.log(val)
+                // click后打印出当前mt-tab-item的id
+            }
+        },
+        methods: {
+            handleClick: function () {
+                this.$toast('Hello world!')
+            },
+
+            // handleChange(index) {}
+        }
+    });
+
+
+</script>
+
+<style lang="" scoped>
+    .Chairclass-content p {
+        margin-bottom: 0rem;
+    }
+    .mobile_content article:last-child{
+        margin-bottom: 0rem;
+    }
+</style>
+
+</html>

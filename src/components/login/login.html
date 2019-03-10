@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+     <!-- 引入样式 -->
+     <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+     <link rel="stylesheet" href="../assets/css/normalize.css">
+     <link rel="stylesheet" href="../assets/css/Project.css">
+     <link rel="stylesheet" href="../assets/less/template.css">
+</head>
+<body>
+    <div id="app">
+        <article class="nav-title">
+            <mt-header title="绑定选择">
+                <router-link to="/" slot="left">
+                    <mt-button icon="back"></mt-button>
+                </router-link>
+                <!-- <mt-button icon="more" slot="right"></mt-button> -->
+            </mt-header>
+        </article>
+
+        <div class="mobile_content">
+            <article class="text-center">
+                <div class="login_content">
+                        <div class="XT-login">
+                                <img src="../assets/mobile_img/XT-login-right.png" alt="" style="width:auto;">
+                                <div class="fz15 c30 mt-10">暄桐教室</div>
+                            </div>
+                            <div class="XT-button">
+                                <!-- <mt-button size="large" type="primary" @click.native="handleClick">使用微信绑定</mt-button> -->
+                                <mt-button size="large" type="primary" @click.native="handleClick">使用微信绑定</mt-button>
+
+                            </div>
+                            <div class="mt-40">
+                                <mt-button size="large" type="primary" @click.native="handleClick1">使用大陆手机号绑定</mt-button>
+                            </div>
+                </div>
+               
+            </article>
+        </div>
+    </div>
+</body>
+<!-- 先引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+<script>
+
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                selected: 'Home_menu',//首页menu
+                Haveclass_menuList: '1',
+                value: '',
+
+            }
+        },
+        watch: {
+            selected: function (val, oldVal) {
+                console.log(val)
+                // click后打印出当前mt-tab-item的id
+            },
+            Haveclass_menuList: function (val, oldVal) {
+                console.log(val)
+                // click后打印出当前mt-tab-item的id
+            }
+        },
+        methods: {
+            handleClick: function () {
+                // this.href('./index.html');
+               
+            },
+
+            // handleChange(index) {}
+        }
+    });
+
+
+</script>
+
+<style lang="" scoped>
+    /* .mobile_content{
+        height: -webkit-fill-available;
+
+    }
+    .mobile_content article:last-child{
+        margin-bottom: 0rem;
+    } */
+</style>
+</html>
